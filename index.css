@@ -1,0 +1,278 @@
+/* start of standard styling */
+:root{
+    --color-one: #000;
+    --color-two: #eee;
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    background-color: var(--color-two);
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+    line-height: 1.5;
+    font-size: small;
+    min-height: 150vh;
+}
+/* end of standard styling */
+
+/* start of header section */
+.header{
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    background-color: var(--color-two);
+    position: fixed;
+}
+
+.img-header{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.nav-ul li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--color-one);
+}
+
+.nav-ul li a:hover{
+    color: #000;
+}
+/* end of header section */
+
+/* start of contact section */
+.section{
+    padding-top: 120px;
+}
+
+.div-contact{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#h4-contact{
+    font-weight: bold;
+    font-size: medium;
+}
+
+#email{
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    padding-left: 5px;
+    font-size: 13px;
+}
+
+#button{
+    font-weight: bold;
+    font-size: small;
+}
+/* end of contact section */
+
+/* start of main section */
+.outer-main-div{
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+
+.awesome{
+    visibility: hidden;
+}
+
+.h5-main{
+    font-weight: bold;
+}
+/* end of main section */
+
+/* start of video section */
+.video-div{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#video{
+    width: 80%;
+}
+/* end of video section */
+
+/* start of card section */
+
+.product-div{
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 100px; */
+}
+.product-body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #000;
+    margin: 5px auto;
+    width: 45%;
+}
+
+.product-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: gray;
+    padding: 10px;
+}
+
+.product-inner-div{
+    padding: 20px 0;
+}
+
+.product-h6{
+    font-weight: bold;
+}
+/* end of card section */
+
+/* start of footer section */
+.footer-div{
+    background-color: rgb(189, 189, 194);
+    /* bottom: 0; */
+    padding: 10px 0;
+}
+
+.footer-ul-div,
+.footer-copy{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-ul-div li{
+    margin-right: 10px;
+}
+
+.footer-ul-div li a{
+    text-decoration: none;
+    color: #000;
+    font-size: medium;
+}
+/* end of footer section */
+
+
+
+/* start of medium screen */
+@media screen and (min-width:600px) {
+    /* start of header section */
+    .header{
+        display: flex;
+    }
+
+    .div-logo{
+        flex: 1;
+    }
+
+    .div-ul{
+        margin-top: 5px;
+        flex: 2;
+    }
+
+    .img-header{
+        margin-top: 20px;
+        width: 100%;
+    }     
+    /* end of header section */
+
+
+    /* start contact section */
+    #email{
+        width: 30%;
+    }
+    /* end contact section */
+
+    /* start of main section */
+    .outer-main-div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inner-main-div{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .awesome{
+        visibility: visible;
+        margin: 0 30px;
+    }
+
+    .h5-main{
+        text-align: start;
+    }
+
+    p{
+        text-align: start;
+        width: 80%;
+    }
+    /* end of main section */
+
+    /* start of video section */
+    #video{
+        width: 70%;
+    }
+    /* end of video section */
+}
+/* end of medium screen */
+
+
+/* start of larger screen */
+@media screen and (min-width:960px) {
+    /* start of header section */
+    .img-header{
+        margin: 35px 0 0 0;
+        width: 60%;;
+    }
+    
+    .nav-ul {
+        float: right;
+        margin-right: 20px;
+    }
+
+    .nav-ul li{
+        display: inline-block;
+        line-height: 80px;
+    }
+    
+    .nav-ul li a{
+        padding: 0 50px;
+    }
+    /* end of header section */
+
+    /* start of main section */
+    .outer-main-div{
+        width: 60%;
+    }
+    /* end of main section */
+
+    /* start of video section */
+    #video{
+        width: 50%;
+    }
+    /* end of video section */
+
+    /* start of card section */
+    .product-div{
+        flex-direction: row;
+    }
+
+    .product-body{
+        width: 25%;
+    }
+    /* end of card section */
+}
+/* end of larger screen */
